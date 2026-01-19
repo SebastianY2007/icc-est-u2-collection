@@ -1,14 +1,16 @@
 import Controllers.MaquinasController;
+import Models.Maps;
 import Models.Maquina;
-import Models.Node;
 import Models.Person;
-import Structures.Sets.Sets;
+import Structures.maps.EjerciciosMapas;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;    
 
 public class App {
     public static void main(String[] args) throws Exception {
+        /* 
         Sets setsClase = new Sets();
         Set<String> hashSet = setsClase.construirHashSet();
         System.out.println(hashSet);
@@ -44,6 +46,42 @@ public class App {
         System.out.println("Ana".compareTo("Carlos"));
 
         runMaquina();
+
+        */
+        // runMaps();
+        runEjercicios();
+    }
+
+    private static void runEjercicios() {
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+        Map<Integer, Integer> resultado = ejercicios.contarDuplicados(list);
+        System.out.println(resultado);
+
+        List<Integer> list2 = Arrays.asList(
+            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+            7, 3, 8, 9, 6, 7, 10
+        );
+
+        System.out.println(ejercicios.primerNoRepetido(list2));
+
+        List<String[]> entradas = List.of(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
+        ejercicios.rankingPuntajes(entradas);
+
     }
 
     private static void runMaquina() {
@@ -55,6 +93,26 @@ public class App {
             System.out.println(maquina.getSubred() + " - " + maquina.getNombre());
         }
         System.out.println(maquinas0.size());
+    }
+
+    public static void runMaps() {
+        Maps maps = new Maps();
+        System.out.println("HashMap");
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        System.err.println(hashMap);
+
+        System.out.println("Linked HashMap");
+        Map<String, Integer> lMap = maps.contruirLinkedHashMap();
+        System.err.println(lMap);
+
+        System.out.println("TreeMap");
+        Map<String, Integer> tree = maps.contruirTreeMap();
+        System.err.println(tree);
+
+        System.out.println("TreeMap Persons ");
+        Map<Person, Integer> treePMap = maps.contruirTreeMapPersons();
+        System.err.println(treePMap); 
+        maps.printFilter(treePMap);
     }
 
     static List<Maquina> crearMaquinas() {

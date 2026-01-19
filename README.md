@@ -1,18 +1,36 @@
-## Getting Started
+# Práctica: Estructuras No Lineales - 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Autor
+- Nombre: Derlis Yupangui
+- Carrera/Curso: Estructura de Datos
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+##  Nombre de la práctica - Fecha
+- Práctica: Maps Ejercicios
+- Fecha: [2026-01-19]
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Descripción
+En esta práctica se trabajó con estructuras no lineales del tipo Map en Java, implementando métodos para almacenar y procesar datos mediante HashMap, LinkedHashMap y TreeMap. Se desarrollaron ejercicios para el conteo de elementos duplicados y la manipulación de colecciones, reforzando el uso de claves, valores y recorridos de mapas.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Evidencias
+### Captura 1 
+![alt text](Ej1.png)
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Descripción
+En este ejercicio se implementó un método que permite identificar el primer número que no se repite dentro de una lista de enteros, respetando el orden de aparición. Para ello se utilizó una estructura Map que almacena la cantidad de veces que aparece cada elemento, logrando una solución eficiente con complejidad O(N).
+
+## Evidencias
+### Captura 1 
+![alt text](Ej2.png)
+
+---
+
+## Descripción
+En este ejercicio se desarrolló un ranking de jugadores a partir de sus puntajes, conservando únicamente el mayor puntaje cuando un jugador aparece más de una vez. Se utilizó una estructura Map junto con un comparador personalizado para ordenar los resultados de forma descendente sin emplear listas auxiliares.
+
+## Evidencias
+### Captura 1 
+![alt text](Ej3.png)
